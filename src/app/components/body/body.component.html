@@ -90,19 +90,19 @@
       <td>Convierte la primera letra de cada palabra en mayúsculas y el resto en minúsculas</td>
     </tr>
     <tr>
+      <td>{{nombre2}}</td>
+      <td>capitalizado:false</td>
+      <td>{{nombre2|capitalizado:false}}</td>
+      <td>Se le pasa de parametro un boolean para convertirlas todas o solo la primera palabra. Por defecto es true</td>
+    </tr>
+    <tr>
       <td>{{nombre}}</td>
       <td>contrasena:{{mostrar}}
         <br>
         <button (click)="mostrar =!mostrar" type="button" class="btn btn-outline-primary">Activar/Desactivar</button>
       </td>
       <td>{{nombre|contrasena:mostrar}}</td>
-      <td>Se le pasa de parametro un boolean para convertirlas todas o solo la primera palabra. Por defecto es true</td>
-    </tr>
-    <tr>
-      <td>{{nombre2}}</td>
-      <td>capitalizado:false</td>
-      <td>{{nombre2|capitalizado:false}}</td>
-      <td>Se le pasa de parametro un boolean para convertirlas todas o solo la primera palabra. Por defecto es true</td>
+      <td>Muestra u oculta los caracteres de la palabra</td>
     </tr>
   </tbody>
 </table>
