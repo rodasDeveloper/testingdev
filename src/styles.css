@@ -5,6 +5,20 @@ footer {
     bottom: 0px;
     width: 100%;
 }
+
+.main-container{
+  margin-top: 20px;
+}
+body{
+  padding-bottom: 50px;
+}
+
+.img-logo{
+  width: 120px;
+  height: 120px;
+}
+
+/* ANIMACIONES */
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
