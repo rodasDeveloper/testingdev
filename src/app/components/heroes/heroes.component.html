@@ -1,0 +1,52 @@
+<h1>Heroes</h1>
+<hr />
+
+<div class="row">
+  <div class="col-md-12 text-right">
+    <button
+      [routerLink]="['/heroe', 'nuevo']"
+      routerLinkActive="router-link-active"
+      class="btn btn-outline-primary"
+      type="button"
+      name="button"
+    >
+      Nuevo Heroe
+    </button>
+  </div>
+</div>
+<br />
+
+<div class="row animated fadeIn fast">
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Casa</th>
+            <th scope="col">Bio</th>
+            <th scope="col" class="text-center w230">Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let heroe of (heroes | keyvalue); let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ heroe.value.nombre }}</td>
+            <td>{{ heroe.value.casa }}</td>
+            <td>{{ heroe.value.bio }}</td>
+            <td class="text-center w230">
+              <button [routerLink]="['/heroe', heroe.key]" type="button" class="btn btn-outline-success m-1">
+                Editar
+              </button>
+              <button (click)="borrarHeroe(heroe.key)" type="button" class="btn btn-outline-danger">Borrar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div *ngIf="Object.keys(heroes).length == 0" class="alert alert-info" role="alert">
+        <strong>No hay registros que mostrar</strong>
+      </div>
+    </div>
+  </div>
+</div>
